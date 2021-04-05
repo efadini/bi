@@ -1,0 +1,2 @@
+
+A matriz de barramento mostra que existem dois fatos, TransaçõesDiarias e TransaçõesFraudNaoFraud.

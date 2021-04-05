@@ -1,0 +1,58 @@
+	
+	Nossos dados foram retirados de um .csv disponibilizado no kaggle, e não houve a necessidade de fazer operações
+	de limpeza e tratamentos de dados.
+	
+	link do csv:
+	https://www.kaggle.com/ntnu-testimon/paysim1
+
+	
+	Resumo do data set:	
+
+	Synthetic Financial Datasets For Fraud Detection
+	
+	Apresenta um conjunto de dados sintético gerado usando o simulador chamado PaySim.
+	Usa dados agregados de um conjunto de dados privado para gerar um conjunto de dados sintético que se assemelha
+	à operação normal de transações e injeta comportamento malicioso para avaliar posteriormente o desempenho dos métodos de detecção de fraude.
+	  	
+	Simula transações de dinheiro móvel com base em uma amostra de transações reais extraídas de um mês de registros financeiros de um serviço de dinheiro móvel 
+	implementado em um país africano. Os logs originais foram fornecidos por uma empresa multinacional, 
+	fornecedora do serviço financeiro móvel que atualmente opera em mais de 14 países em todo o mundo.
+	
+	Exemplo de uma linha do data frame:
+
+	(1, PAYMENT, 1060.31, C429214117, 1089.0, 28.69, M1591654462, 0.0, 0.0, 0, 0)
+
+	
+	COLUNAS:
+	
+	step - mapeia o tempo real, 1 step é igual a uma hora. (total de 744 steps ou 30 dias)
+	
+	type - o tipo do pagamento (CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER).
+	
+	amount - valor da transação.
+	
+	nameOrig - cliente que iniciou a transação.
+	
+	oldbalanceOrg - saldo antes da transação.
+	
+	newbalanceOrig - saldo após a transação.
+	
+	nameDest - destinatário da transação.
+	
+	oldbalanceDest - saldo inicial do destinatário antes de receber a transação.
+	
+	newbalanceDest - novo saldo do destinatário após a transação.
+	
+	
+	(Não há informações para clientes que começam com M (Comerciantes)).
+	
+	
+	isFraud - São as transações feitas pelos fraudulentos dentro da simulação.
+	Neste conjunto de dados, o comportamento fraudulento dos agentes visa lucrar 
+	ao assumir o controle das contas dos clientes e tentar esvaziar os fundos transferindo para 
+	outra conta e retirando do sistema.
+	
+	isFlaggedFraud - O modelo de negócios visa controlar as transferências em massa de uma conta 
+	para outra e sinaliza tentativas ilegais. 
+	Uma tentativa ilegal neste conjunto de dados é uma tentativa 
+	de transferir mais de 200.000 em uma única transação.
